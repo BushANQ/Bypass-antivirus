@@ -1,5 +1,5 @@
 # Bypass-Security;
-这就是一个简单的加载器，记录：https://bushsec.cn/archives/87/，现已不能免杀
+这就是一个简单的加载器，记录：https://bushsec.cn/archives/87/    ，现已不能免杀
 主要使用了XOR加密技术实现对shellcode的加密隐藏;
 该项目仅供学术交流参考，请大家合法学习和使用项目;
 ## 道德使用 ：确保您具有执行任何测试的适当权限;
